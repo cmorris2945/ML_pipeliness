@@ -10,7 +10,7 @@ logger = get_logger(__name__)
 def read_yamml(file_path):
     try:
         if not os.path.exists(file_path):
-            raise FileNotFoundError(f"File is not in the given path")
+            raise FileNotFoundError(f"File is not in the given path you punk!")
         
         with open(file_path, "r") as yaml_file: 
             config = yaml.safe_load(yaml_file)
