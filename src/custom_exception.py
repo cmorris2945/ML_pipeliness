@@ -19,6 +19,7 @@ class CustomException(Exception):
         return f"Error in {file_name}, line {line_number}: {error_message}"
     
     def __str__(self):
-        return self.error_message          ### this method gives a text representation of your error message.f
+        return self.error_message          ### this method gives a text representation of your error message. 
+                                           ###When you have an error object with this method, printing it will display the error message as plain text.
 
 
