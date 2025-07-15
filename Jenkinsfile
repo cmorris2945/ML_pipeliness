@@ -1,6 +1,10 @@
 pipeline{
     agent any
 
+    environment {
+        VENV_DIR = 'venv'
+    }
+
     stages{
         stage('Cloning Github repo to Jenkins'){
             steps{
@@ -8,6 +12,16 @@ pipeline{
                     echo'Cloning Githib from Jenkins........'
                     checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-token', url: 'https://github.com/cmorris2945/ML_pipeliness.git']])
 
+                }
+            }
+
+        }
+
+        stage('Setting up our Virtual Environment and Installing Dependencies'){
+            steps{
+                script{
+                    echo'Setting up our Virtual Environment and Installing Dependencies........'
+                    
                 }
             }
 
