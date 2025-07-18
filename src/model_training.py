@@ -55,7 +55,8 @@ class ModelTraining:
         try:
             logger.info("Initializing your model...")
 
-            lgbm_model = lgb.LGMClassifier(random_state=self.random_search_params["random_state"])
+            lgbm_model = lgb.LGBMClassifier(random_state=self.random_search_params["random_state"])
+
 
 
             logger.info("Starting the hyterparamter tuning stuff...")
