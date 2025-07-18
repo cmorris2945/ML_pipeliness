@@ -21,7 +21,7 @@ logger = get_logger(__name__)
 
 class ModelTraining:
 
-    def init__(self,  train_path, test_path, MODEL_OUTPUT_PATH):
+    def __init__(self,  train_path, test_path, MODEL_OUTPUT_PATH):
         self.train_path = train_path
         self.test_path = test_path
         self.MODEL_OUTPUT_PATH = MODEL_OUTPUT_PATH
